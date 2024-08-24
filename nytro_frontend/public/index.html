@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+  <header>
+      <img src="./openrct3.png" alt="Openrct3 logo" id="logo">
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul>
+              <li><router-link to="/download">Download</router-link></li>
+              <li><router-link to="/getHelp">Get help</router-link></li>
+              <li><router-link to="/development">Development</router-link></li>
+          </ul>
+      </div>
+  </header>
+
+  <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>\
+  </body>
+<style>
+    body {
+        font-family: 'JetBrains Mono', monospace;
+        margin: 0;
+        padding: 0;
+        background: repeating-linear-gradient( -45deg,#000000, #051e3a 1px,#000 1px);
+    }
+    header {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        justify-content: center;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    li {
+        display: block;
+        text-decoration: none;
+        padding: 8px 16px;
+    }
+
+    li:last-child {
+        border-right: none;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+
+    .active {
+        background-color: #000000;
+    }
+
+    #logo {
+        width: 25%;
+        height: 25%;
+    }
+</style>
+</html>
